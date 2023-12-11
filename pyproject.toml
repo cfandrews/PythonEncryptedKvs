@@ -3,9 +3,9 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pythontemplate"
+name = "encryptedkvs"
 version = "0.0.1"
-description = "Template repository to be used as a base for Python projects"
+description = "Encrypted on-disk key-value store for arbitrary Python data"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {file = "LICENSE"}
@@ -13,14 +13,14 @@ authors = [{name = "Charles Andrews", email = "cfandrews@outlook.com"}]
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/cfandrews/PythonTemplate"
+Homepage = "https://github.com/cfandrews/PythonEncryptedKvs"
 
 [project.optional-dependencies]
 build = [
     "pre-commit==3.5.0",
-    "isort==5.12.0",
-    "ruff==0.1.3",
-    "mypy==1.6.1",
+    "isort==5.13.1",
+    "ruff==0.1.7",
+    "mypy==1.7.1",
     "pytest==7.4.3",
     "assertpy==1.1",
     "pytest-cov==4.1.0",
@@ -45,7 +45,7 @@ profile = "black"
 src_paths = ["src", "tests"]
 
 [tool.pytest.ini_options]
-addopts = "--cov=pythontemplate --cov-fail-under=100 --cov-report=term-missing tests"
+addopts = "--cov=encryptedkvs --cov-fail-under=100 --cov-report=term-missing tests"
 cache_dir = "./build/pytest"
 
 [tool.mypy]
